@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AXIS Scoring Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="reset-toast" id="resetToast">RESET</div>
+
+  <main class="frame" aria-label="Axis scoring tracker">
+    <div class="decor" aria-hidden="true">
+      <div class="shape ring a"></div>
+      <div class="shape ring b"></div>
+      <div class="shape line c"></div>
+      <div class="shape line d"></div>
+      <div class="shape dot e"></div>
+      <div class="shape dot f"></div>
+      <div class="shape ring g"></div>
+      <div class="shape ring h"></div>
+    </div>
+
+    <section class="content">
+      <header class="title">
+        AXIS
+        <small>score tracker</small>
+      </header>
+
+      <section class="tracker-wrap">
+        <div class="tracker-shell">
+          <div class="tracker-grid"></div>
+          <div class="counter-row">
+            <button class="btn" id="minusBtn" aria-label="Decrease Axis">−</button>
+            <div class="counter-card" aria-live="polite" aria-atomic="true">
+              <div>
+                <div class="value" id="value">15</div>
+                <div class="subtext">Axis Value</div>
+              </div>
+            </div>
+            <button class="btn" id="plusBtn" aria-label="Increase Axis">+</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">Use + and − to track card values. Reset triggers at 21+ or 9−.</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
