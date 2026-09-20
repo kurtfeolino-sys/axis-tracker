@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AXIS Scoring Tracker</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="reset-toast" id="resetToast">RESET</div>
-
   <main class="frame" aria-label="Axis scoring tracker">
     <div class="decor" aria-hidden="true">
       <div class="shape ring a"></div>
@@ -21,6 +19,8 @@
       <div class="shape ring h"></div>
     </div>
 
+    <div class="reset-toast" id="resetToast">RESET</div>
+
     <section class="content">
       <header class="title">
         AXIS
@@ -32,18 +32,22 @@
           <div class="tracker-grid"></div>
           <div class="counter-row">
             <button class="btn" id="minusBtn" aria-label="Decrease Axis">−</button>
+
             <div class="counter-card" aria-live="polite" aria-atomic="true">
               <div>
                 <div class="value" id="value">15</div>
                 <div class="subtext">Axis Value</div>
               </div>
             </div>
+
             <button class="btn" id="plusBtn" aria-label="Increase Axis">+</button>
           </div>
         </div>
       </section>
 
-      <footer class="footer">Use + and − to track card values. Reset triggers at 21+ or 9−.</footer>
+      <footer class="footer">
+        Use + and − to track card values. The Axis wraps from 20 back to 10, and from 10 back to 20.
+      </footer>
     </section>
   </main>
 
